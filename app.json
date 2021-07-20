@@ -3,9 +3,8 @@
   "displayName": "CryptocurrencyApp",
   "tabs" : {
     "height": 100,
-    "featuredIconWidth": 42,
-    "featuredIconHeight": 42,
-    "iconWidth": 25,
-    "iconHeight": 25
+    "featuredIconSize": 40,
+    "iconSize": 25
+    
   }
 }

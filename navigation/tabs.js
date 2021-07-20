@@ -30,11 +30,7 @@ const Tabs = () => {
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <TabIcon
-                focused={focused}
-                icon={icons.pie_chart}
-                label="Wallet"
-              />
+              <TabIcon focused={focused} icon={icons.wallet} label="Wallet" />
             );
           },
         }}
@@ -45,7 +41,7 @@ const Tabs = () => {
             return (
               <TabIcon
                 focused={focused}
-                icon={icons.pie_chart}
+                icon={icons.transfer}
                 label="Transfer"
               />
             );
@@ -60,7 +56,7 @@ const Tabs = () => {
             return (
               <TabIcon
                 focused={focused}
-                icon={icons.transaction}
+                icon={icons.deposit}
                 label="Deposit"
                 featured
               />
@@ -74,11 +70,7 @@ const Tabs = () => {
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <TabIcon
-                focused={focused}
-                icon={icons.transaction}
-                label="Convert"
-              />
+              <TabIcon focused={focused} icon={icons.convert} label="Convert" />
             );
           },
         }}

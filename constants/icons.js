@@ -8,16 +8,28 @@ const right_arrow = require("../assets/icons/right_arrow.png");
 const settings = require("../assets/icons/settings.png");
 const star = require("../assets/icons/star.png");
 const transaction = require("../assets/icons/transaction.png");
+import {
+  faWallet,
+  faExchangeAlt,
+  faGem,
+  faCogs,
+  faSync,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default {
-    back_arrow,
-    home,
-    line_graph,
-    notification_color,
-    notification_white,
-    pie_chart,
-    right_arrow,
-    settings,
-    star,
-    transaction
-}
+  back_arrow,
+  home,
+  line_graph,
+  notification_color,
+  notification_white,
+  pie_chart,
+  right_arrow,
+  settings,
+  star,
+  transaction,
+  wallet: faWallet,
+  transfer: faExchangeAlt,
+  deposit: faGem,
+  convert: faSync,
+  settings: faCogs,
+};
