@@ -1,4 +1,11 @@
 {
   "name": "CryptocurrencyApp",
-  "displayName": "CryptocurrencyApp"
+  "displayName": "CryptocurrencyApp",
+  "tabs" : {
+    "height": 100,
+    "featuredIconWidth": 42,
+    "featuredIconHeight": 42,
+    "iconWidth": 25,
+    "iconHeight": 25
+  }
 }

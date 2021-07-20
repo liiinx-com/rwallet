@@ -1,9 +1,7 @@
-import Home from "./Home"
-import CryptoDetail from "./CryptoDetail"
-import Transaction from "./Transaction"
+import Home from "./Home";
+import Convert from "./Convert";
+import Deposit from "./Deposit";
+import Settings from "./Settings";
+import Transfer from "./Transfer";
 
-export {
-    Home,
-    CryptoDetail,
-    Transaction
-};
+export { Home, Convert, Deposit, Settings, Transfer };
