@@ -8,12 +8,23 @@ const right_arrow = require("../assets/icons/right_arrow.png");
 const settings = require("../assets/icons/settings.png");
 const star = require("../assets/icons/star.png");
 const transaction = require("../assets/icons/transaction.png");
+
+const tik = require("../assets/images/tik.png");
+const btc = require("../assets/images/btc.png");
+const eth = require("../assets/images/eth.png");
+const xrp = require("../assets/images/xrp.png");
+const doge = require("../assets/images/doge.png");
+const cdn = require("../assets/images/cdn.png");
+
 import {
   faWallet,
   faExchangeAlt,
   faGem,
   faCogs,
   faSync,
+  faDollarSign,
+  faAngleDoubleDown,
+  faAngleDoubleUp,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default {
@@ -32,4 +43,13 @@ export default {
   deposit: faGem,
   convert: faSync,
   settings: faCogs,
+  coin: faDollarSign,
+  arrowUp: faAngleDoubleUp,
+  arrowDown: faAngleDoubleDown,
+  tik,
+  cdn,
+  btc,
+  eth,
+  doge,
+  xrp,
 };

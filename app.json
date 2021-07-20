@@ -1,10 +1,10 @@
 {
   "name": "CryptocurrencyApp",
   "displayName": "CryptocurrencyApp",
+  "myWalletName":"My Royal Wallet",
   "tabs" : {
     "height": 100,
     "featuredIconSize": 40,
     "iconSize": 25
-    
   }
 }

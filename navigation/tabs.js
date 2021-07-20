@@ -57,7 +57,7 @@ const Tabs = () => {
               <TabIcon
                 focused={focused}
                 icon={icons.deposit}
-                label="Deposit"
+                label="Invest"
                 featured
               />
             );
