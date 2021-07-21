@@ -7,7 +7,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const TabIcon = ({ label, icon, focused, iconStyle, featured }) => {
   const color = featured
-    ? COLORS.primary
+    ? focused
+      ? COLORS.primary
+      : COLORS.secondary
     : focused
     ? COLORS.white
     : COLORS.gray;

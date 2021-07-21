@@ -1,7 +1,8 @@
 import React from "react";
-import { Convert, Transfer, Settings, Deposit } from "./screens";
+import { Convert, Transfer, Settings, Deposit, AssetDetails } from "./screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+import { screens } from "./constants";
 
 import Tabs from "./navigation/tabs";
 
@@ -14,9 +15,10 @@ const App = () => {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={"home"}
+        initialRouteName={screens.HOME}
       >
-        <Stack.Screen name="home" component={Tabs} />
+        <Stack.Screen name={screens.HOME} component={Tabs} />
+        <Stack.Screen name={screens.ASSET_DETAILS} component={AssetDetails} />
         <Stack.Screen name="convert" component={Convert} />
         <Stack.Screen name="transfer" component={Transfer} />
         <Stack.Screen name="settings" component={Settings} />

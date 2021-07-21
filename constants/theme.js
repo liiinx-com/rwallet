@@ -2,10 +2,12 @@ import { Dimensions } from "react-native";
 const { width, height } = Dimensions.get("window");
 
 export const COLORS = {
-  primary: "#7F5DF0", // Light purple
-  secondary: "#5D2DFD", // Dark purple
+  // primary: "#7F5DF0", // Light purple
+  // secondary: "#5D2DFD", // Dark purple
+  primary: "#FBC02D", // Light purple
+  secondary: "#F9A825", // Dark purple
 
-  white: "#fff",
+  white: "#FFF8E1",
   black: "#000000",
   green: "#37E39F",
   red: "#F9A8BA",
@@ -13,6 +15,13 @@ export const COLORS = {
   lightGray: "#dbdbdb",
   darkGray: "#303030",
   lightGray1: "#f5f6fa",
+
+  tik: "#072801",
+  btc: "#342600",
+  cdn: "#3C0303",
+  xrp: "#031c33",
+  doge: "#372903",
+  eth: "#031933",
 };
 export const SIZES = {
   // global sizes
