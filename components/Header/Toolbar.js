@@ -17,6 +17,7 @@ const Toolbar = ({ buttons = [], onPress }) => {
     >
       {buttons.map(({ label, icon, name, disabled }, index) => (
         <IconTextButton
+          key={name}
           onPress={() => onPress(name)}
           label={label}
           icon={icon}
