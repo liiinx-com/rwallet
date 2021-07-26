@@ -1,14 +1,20 @@
 import React from "react";
-import { View, Image, TouchableOpacity, Text, StyleSheet } from "react-native";
 import { TabIcon } from "../components";
 import {
   createBottomTabNavigator,
   BottomTabBar,
 } from "@react-navigation/bottom-tabs";
 
-import { Home, Convert, Deposit, Settings, Transfer } from "../screens";
+import {
+  Wallet,
+  Convert,
+  Market,
+  Deposit,
+  Settings,
+  Transfer,
+} from "../screens";
 import { tabs } from "../app.json";
-import { COLORS, FONTS, icons } from "../constants";
+import { COLORS, FONTS, icons, screens } from "../constants";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,15 +31,43 @@ const Tabs = () => {
       }}
     >
       <Tab.Screen
-        name="home"
-        component={Home}
+        name={screens.MARKET}
+        component={Market}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <TabIcon focused={focused} icon={icons.wallet} label="Wallet" />
+              <TabIcon focused={focused} icon={icons.coin} label="Market" />
             );
           },
         }}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <TabIcon focused={focused} icon={icons.convert} label="Convert" />
+            );
+          },
+        }}
+        name="convert"
+        component={Convert}
+      />
+
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <TabIcon
+                focused={focused}
+                icon={icons.deposit}
+                label="Wallet"
+                featured
+              />
+            );
+          },
+        }}
+        name={screens.WALLET}
+        component={Wallet}
       />
       <Tab.Screen
         options={{
@@ -50,33 +84,7 @@ const Tabs = () => {
         name="transfer"
         component={Transfer}
       />
-      <Tab.Screen
-        options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <TabIcon
-                focused={focused}
-                icon={icons.deposit}
-                label="Invest"
-                featured
-              />
-            );
-          },
-        }}
-        name="deposit"
-        component={Deposit}
-      />
-      <Tab.Screen
-        options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <TabIcon focused={focused} icon={icons.convert} label="Convert" />
-            );
-          },
-        }}
-        name="convert"
-        component={Convert}
-      />
+
       <Tab.Screen
         options={{
           tabBarIcon: ({ focused }) => {
@@ -89,25 +97,11 @@ const Tabs = () => {
             );
           },
         }}
-        name="settings"
+        name={screens.SETTINGS}
         component={Settings}
       />
     </Tab.Navigator>
   );
 };
-
-const styles = StyleSheet.create({
-  shadow: {
-    shadowColor: COLORS.primary,
-    shadowOffset: {
-      width: 0,
-      height: 10,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
-    elevation: 5,
-  },
-});
 
 export default Tabs;
