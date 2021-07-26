@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { View, Text, StatusBar } from "react-native";
 import { useMyWallet } from "../../hooks";
 import { COLORS, FONTS, screens, icons } from "../../constants";
 
 import { Assets, Header, BalanceInfo } from "../../components";
 
-const Home = ({ navigation }) => {
+const Wallet = ({ navigation }) => {
   const { isLoading, data } = useMyWallet();
   const { assets, totalValue, currencyCode, currencySign } = data;
 
@@ -21,6 +21,7 @@ const Home = ({ navigation }) => {
         </Text>
       ) : (
         <>
+          <StatusBar barStyle="light-content" />
           <Header
             titleComponent={
               <BalanceInfo
@@ -51,4 +52,4 @@ const Home = ({ navigation }) => {
   );
 };
 
-export default Home;
+export default Wallet;

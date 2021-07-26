@@ -24,7 +24,14 @@ import {
   faSync,
   faDollarSign,
   faAngleDoubleDown,
+  faChevronRight,
   faAngleDoubleUp,
+  faCheck,
+  faHourglassHalf,
+  faBars,
+  faTimes,
+  faComments,
+  faPowerOff,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default {
@@ -46,6 +53,12 @@ export default {
   coin: faDollarSign,
   arrowUp: faAngleDoubleUp,
   arrowDown: faAngleDoubleDown,
+  check: faCheck,
+  waiting: faHourglassHalf,
+  cancel: faTimes,
+  chevronRight: faChevronRight,
+  bars: faPowerOff,
+  comments: faComments,
   tik,
   cdn,
   btc,

@@ -1,8 +1,8 @@
 import React from "react";
-import { View } from "react-native";
-import { COLORS, SIZES } from "../../constants";
-
+import { View, Text } from "react-native";
+import { COLORS, icons, SIZES } from "../../constants";
 import Toolbar from "./Toolbar";
+import Menu from "./Menu";
 
 const Index = ({
   titleComponent,
@@ -20,6 +20,7 @@ const Index = ({
         ...containerStyle,
       }}
     >
+      {/* <Menu /> */}
       {titleComponent}
       <Toolbar onPress={onToolbarPress} buttons={toolbarButtons} />
     </View>
