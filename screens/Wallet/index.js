@@ -13,6 +13,10 @@ const Wallet = ({ navigation }) => {
     navigation.navigate(screens.ASSET_DETAILS, { asset });
   };
 
+  const handleMenuPress = () => {
+    navigation.navigate(screens.SETTINGS);
+  };
+
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.black }}>
       {isLoading ? (
@@ -23,6 +27,7 @@ const Wallet = ({ navigation }) => {
         <>
           <StatusBar barStyle="light-content" />
           <Header
+            onMenuPress={handleMenuPress}
             titleComponent={
               <BalanceInfo
                 totalValue={totalValue}

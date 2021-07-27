@@ -14,7 +14,7 @@ const wallet = {
       symbol: "TIK",
       name: "Tikcoin",
       size: "90000",
-      value: "166500",
+      value: "4056500",
       avatar: "royal_black_TIK_use_util_function",
       currencyCode: "USD",
       currencySign: "$",
@@ -23,8 +23,8 @@ const wallet = {
     {
       symbol: "BTC",
       name: "Bitcoin",
-      size: "100236",
-      value: "3207637781.9688",
+      size: "10236",
+      value: "3027781.9688",
       avatar: "royal_black_BTC_use_util_function",
       currencyCode: "USD",
       currencySign: "$",
@@ -61,7 +61,7 @@ const wallet = {
       assetValue: "0.35",
     },
   ],
-  totalValue: "3207804281.9688",
+  totalValue: "7078042.819688",
   currencyCode: "USD",
   currencySign: "$",
 };

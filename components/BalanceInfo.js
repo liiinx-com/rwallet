@@ -9,56 +9,53 @@ const BalanceInfo = ({
   currencyCode,
   currencySign,
   title = myWalletName,
-}) => {
-  return (
+}) => (
+  <View
+    style={{
+      paddingHorizontal: SIZES.padding,
+      borderBottomLeftRadius: 25,
+      borderBottomRightRadius: 25,
+    }}
+  >
     <View
       style={{
-        paddingHorizontal: SIZES.padding,
-        borderBottomLeftRadius: 25,
-        borderBottomRightRadius: 25,
-        marginTop: 50,
+        flexDirection: "row",
+        marginBottom: SIZES.radius,
       }}
     >
-      <View
+      {image && (
+        <Image
+          source={image}
+          style={{ height: 48, width: 48, marginRight: 7 }}
+        />
+      )}
+      <Text
         style={{
-          flexDirection: "row",
-          marginBottom: SIZES.radius,
+          color: COLORS.lightGray,
+          ...FONTS.h2,
+          marginTop: image ? 5 : 0,
         }}
       >
-        {image && (
-          <Image
-            source={image}
-            style={{ height: 48, width: 48, marginRight: 7 }}
-          ></Image>
-        )}
-        <Text
-          style={{
-            color: COLORS.lightGray,
-            ...FONTS.h2,
-            marginTop: image ? 5 : 0,
-          }}
-        >
-          {title}
-        </Text>
-      </View>
-      <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
-        <Text style={{ color: COLORS.primary, ...FONTS.h1 }}>
-          {currencySign}
-          {Number(totalValue).toLocaleString()}
-        </Text>
-        <Text
-          style={{
-            ...FONTS.h3,
-            color: COLORS.lightGray,
-            marginLeft: 3,
-            marginRight: 3,
-          }}
-        >
-          {currencyCode}
-        </Text>
-      </View>
+        {title}
+      </Text>
     </View>
-  );
-};
+    <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
+      <Text style={{ color: COLORS.primary, ...FONTS.h1 }}>
+        {currencySign}
+        {Number(totalValue).toLocaleString()}
+      </Text>
+      <Text
+        style={{
+          ...FONTS.h3,
+          color: COLORS.lightGray,
+          marginLeft: 3,
+          marginRight: 3,
+        }}
+      >
+        {currencyCode}
+      </Text>
+    </View>
+  </View>
+);
 
 export default BalanceInfo;

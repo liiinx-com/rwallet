@@ -2,7 +2,7 @@ import React from "react";
 import { COLORS, FONTS, screens, icons, SIZES } from "../../constants";
 
 import { View, Text } from "react-native";
-import Button from "./Button";
+import Button from "../../components/Button";
 
 const LoginForm = ({ onLogin, onSignup }) => {
   return (

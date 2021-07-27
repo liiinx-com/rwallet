@@ -1,9 +1,15 @@
 import React, { Children } from "react";
-import { COLORS, FONTS, screens, icons, SIZES } from "../../constants";
+import { COLORS, FONTS, screens, icons, SIZES } from "../constants";
 import { View, Text, TouchableOpacity } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 
-const Button = ({ text, containerStyle, colors = [], onPress }) => {
+const Button = ({
+  text,
+  containerStyle,
+  colors = [],
+  onPress,
+  textColor = COLORS.white,
+}) => {
   const WrapperComponent = ({ children }) => {
     if (colors.length > 1) {
       return (
@@ -31,7 +37,7 @@ const Button = ({ text, containerStyle, colors = [], onPress }) => {
         <Text
           style={{
             textAlign: "center",
-            color: COLORS.white,
+            color: textColor,
             ...FONTS.h2,
           }}
         >
