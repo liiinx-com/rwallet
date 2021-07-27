@@ -6,9 +6,20 @@ import SectionTitle from "./SectionTitle";
 import UserInfo from "./UserInfo";
 import SettingItem from "./SettingItem";
 import SettingSwitchItem from "./SettingSwitchItem";
+import Button from "../../components/Button";
 
 const Settings = ({ navigation }) => {
   const [faceId, setFaceId] = useState(false);
+
+  const handleBackPress = () => {
+    navigation.pop();
+  };
+  const handleSignout = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{ name: screens.LOGIN }],
+    });
+  };
 
   const pressHandler = (key, value) => {
     const valueHandlers = {
@@ -18,11 +29,6 @@ const Settings = ({ navigation }) => {
       currency: () => {},
       language: () => {},
       changePassword: () => {},
-      signout: () =>
-        navigation.reset({
-          index: 0,
-          routes: [{ name: screens.LOGIN }],
-        }),
     };
     valueHandlers[key]();
   };
@@ -39,6 +45,7 @@ const Settings = ({ navigation }) => {
       <StatusBar barStyle="light-content" />
 
       <Header
+        onBackPress={handleBackPress}
         containerStyle={{
           height: 100,
           justifyContent: "flex-end",
@@ -95,11 +102,17 @@ const Settings = ({ navigation }) => {
           itemKey="changePassword"
           onPress={pressHandler}
         />
-        <SettingItem
-          noIcon
-          title="Signout"
-          itemKey="signout"
-          onPress={pressHandler}
+
+        <Button
+          text="Signout"
+          colors={[COLORS.darkGray, COLORS.primary]}
+          textColor={COLORS.white}
+          onPress={handleSignout}
+          containerStyle={{
+            marginTop: 50,
+            height: 40,
+            borderRadius: 15,
+          }}
         />
       </ScrollView>
     </View>

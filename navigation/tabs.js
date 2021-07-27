@@ -36,7 +36,7 @@ const Tabs = () => {
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <TabIcon focused={focused} icon={icons.coin} label="Market" />
+              <TabIcon focused={focused} icon={icons.market} label="Market" />
             );
           },
         }}
@@ -45,12 +45,12 @@ const Tabs = () => {
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <TabIcon focused={focused} icon={icons.convert} label="Convert" />
+              <TabIcon focused={focused} icon={icons.qrCode} label="Deposit" />
             );
           },
         }}
-        name="convert"
-        component={Convert}
+        name={screens.DEPOSIT}
+        component={Deposit}
       />
 
       <Tab.Screen
@@ -69,6 +69,7 @@ const Tabs = () => {
         name={screens.WALLET}
         component={Wallet}
       />
+
       <Tab.Screen
         options={{
           tabBarIcon: ({ focused }) => {
@@ -84,21 +85,16 @@ const Tabs = () => {
         name="transfer"
         component={Transfer}
       />
-
       <Tab.Screen
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <TabIcon
-                focused={focused}
-                icon={icons.settings}
-                label="Settings"
-              />
+              <TabIcon focused={focused} icon={icons.convert} label="Convert" />
             );
           },
         }}
-        name={screens.SETTINGS}
-        component={Settings}
+        name="convert"
+        component={Convert}
       />
     </Tab.Navigator>
   );
