@@ -26,19 +26,19 @@ const secureString = (str = "") => {
   return first2Chars + "*".repeat(str.length - 3) + lastChart;
 };
 
-export default function UserInfo({
-  containerStyle,
-  email = "amir.zad@contractika.com",
-  username = "amir.zad",
-}) {
+export default function UserInfo({ containerStyle, email, username }) {
   return (
     <View style={{ ...containerStyle }}>
-      <Text style={{ color: COLORS.white, ...FONTS.h3 }}>
-        {secureEmail(email)}
-      </Text>
-      <Text style={{ color: COLORS.lightGray, ...FONTS.body4 }}>
-        {secureString(username)}
-      </Text>
+      {email && (
+        <Text style={{ color: COLORS.white, ...FONTS.h3 }}>
+          {secureEmail(email)}
+        </Text>
+      )}
+      {username && (
+        <Text style={{ color: COLORS.lightGray, ...FONTS.body4 }}>
+          {secureString(username)}
+        </Text>
+      )}
     </View>
   );
 }

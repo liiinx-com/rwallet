@@ -17,7 +17,7 @@ const Button = ({
           start={{ x: 0, y: 1 }}
           end={{ x: 0, y: 0 }}
           colors={colors}
-          style={{ ...containerStyle }}
+          style={{ justifyContent: "center", ...containerStyle }}
         >
           {children}
         </LinearGradient>

@@ -6,6 +6,11 @@ import Header from "./Header";
 import AssetHeader from "./AssetHeader";
 import Transactions from "./Transactions";
 import KycStatus from "./KycStatus";
+import LineChart from "./LineChart";
+import Button from "./Button";
+import PageLoading from "./PageLoading";
+import Modal from "./Modal";
+import TransactionMessage from "./TransactionMessage";
 
 export {
   TabIcon,
@@ -15,5 +20,10 @@ export {
   BalanceInfo,
   AssetHeader,
   Transactions,
+  Button,
   KycStatus,
+  LineChart,
+  Modal,
+  PageLoading,
+  TransactionMessage,
 };

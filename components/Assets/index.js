@@ -3,7 +3,7 @@ import { View, FlatList, Text, TouchableOpacity, Image } from "react-native";
 import { COLORS, FONTS, icons, SIZES } from "../../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
-const index = ({ assets, onPress }) => {
+const index = ({ assets, onPress, label = "My Assets" }) => {
   return (
     <FlatList
       keyExtractor={({ symbol }) => symbol}
@@ -13,7 +13,7 @@ const index = ({ assets, onPress }) => {
       }}
       ListHeaderComponent={
         <View style={{ marginBottom: SIZES.radius, marginTop: 20 }}>
-          <Text style={{ color: COLORS.white, ...FONTS.h2 }}>My Assets</Text>
+          <Text style={{ color: COLORS.white, ...FONTS.h2 }}>{label}</Text>
         </View>
       }
       renderItem={({ item }) => {
@@ -21,7 +21,7 @@ const index = ({ assets, onPress }) => {
         return (
           <TouchableOpacity
             style={{
-              height: 55,
+              height: 65,
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
@@ -32,7 +32,7 @@ const index = ({ assets, onPress }) => {
               <Image
                 source={icons[symbol.toLowerCase()]}
                 style={{ height: 32, width: 32 }}
-              ></Image>
+              />
               {/* <FontAwesomeIcon
                 color={COLORS.white}
                 icon={icons.coin}
@@ -41,12 +41,18 @@ const index = ({ assets, onPress }) => {
               /> */}
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={{ color: COLORS.white, ...FONTS.h3 }}>{name}</Text>
+              <Text style={{ color: COLORS.white, ...FONTS.body3 }}>
+                {name}
+              </Text>
             </View>
 
             <View style={{ flex: 1 }}>
               <Text
-                style={{ textAlign: "right", color: COLORS.white, ...FONTS.h3 }}
+                style={{
+                  textAlign: "right",
+                  color: COLORS.white,
+                  ...FONTS.body3,
+                }}
               >
                 {Number(size).toLocaleString()} {symbol}
               </Text>
@@ -60,9 +66,9 @@ const index = ({ assets, onPress }) => {
               >
                 <Text
                   style={{
-                    ...FONTS.h3,
-                    color: COLORS.lightGray,
-                    lineHeight: 15,
+                    ...FONTS.body4,
+                    color: COLORS.gray,
+                    lineHeight: 19,
                     textAlign: "right",
                   }}
                 >

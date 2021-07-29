@@ -1,3 +1,19 @@
+const chartData = [
+  { x: 1453075200, y: 1.47 },
+  { x: 1453161600, y: 1.37 },
+  { x: 1453248000, y: 1.53 },
+  { x: 1453334400, y: 1.54 },
+  { x: 1453420800, y: 1.52 },
+  { x: 1453507200, y: 2.03 },
+  { x: 1453593600, y: 2.1 },
+  { x: 1453680000, y: 2.5 },
+  { x: 1453766400, y: 2.3 },
+  { x: 1453852800, y: 2.42 },
+  { x: 1453939200, y: 2.55 },
+  { x: 1454025600, y: 2.41 },
+  { x: 1454112000, y: 2.43 },
+  { x: 1454198400, y: 2.2 },
+];
 const wallet = {
   assets: [
     {
@@ -66,6 +82,54 @@ const wallet = {
   currencySign: "$",
 };
 
+const cryptoMarketData = [
+  {
+    symbol: "TIK",
+    name: "Tikcoin",
+    avatar: "royal_black_TIK_use_util_function",
+    currencyCode: "USD",
+    currencySign: "$",
+    assetValue: "1.85",
+    chartData,
+  },
+  {
+    symbol: "BTC",
+    name: "Bitcoin",
+    avatar: "royal_black_BTC_use_util_function",
+    currencyCode: "USD",
+    currencySign: "$",
+    assetValue: "32000.8558",
+    chartData,
+  },
+  {
+    symbol: "ETH",
+    name: "Ethereum",
+    avatar: "royal_black_ETH_use_util_function",
+    currencyCode: "USD",
+    currencySign: "$",
+    assetValue: "1.85",
+    chartData,
+  },
+  {
+    symbol: "DOGE",
+    name: "Dogecoin",
+    avatar: "royal_black_DOGE_use_util_function",
+    currencyCode: "USD",
+    currencySign: "$",
+    assetValue: "0.25",
+    chartData,
+  },
+  {
+    symbol: "XRP",
+    name: "XRP",
+    avatar: "royal_black_XRP_use_util_function",
+    currencyCode: "USD",
+    currencySign: "$",
+    assetValue: "0.35",
+    chartData,
+  },
+];
+
 const tikTransactions = [
   {
     status: "COMPLETED",
@@ -87,6 +151,20 @@ export const getMyWallet = () =>
   new Promise((resolve) => {
     setTimeout(() => {
       resolve({ data: wallet });
+    }, 1700);
+  });
+
+export const getCryptoMarketData = () =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ data: cryptoMarketData });
+    }, 1700);
+  });
+
+export const getRealEstateMarketData = () =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ data: [] });
     }, 1700);
   });
 

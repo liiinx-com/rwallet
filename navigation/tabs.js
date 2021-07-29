@@ -5,14 +5,7 @@ import {
   BottomTabBar,
 } from "@react-navigation/bottom-tabs";
 
-import {
-  Wallet,
-  Convert,
-  Market,
-  Deposit,
-  Settings,
-  Transfer,
-} from "../screens";
+import { Wallet, Convert, Market, Deposit, Transfer } from "../screens";
 import { tabs } from "../app.json";
 import { COLORS, FONTS, icons, screens } from "../constants";
 
