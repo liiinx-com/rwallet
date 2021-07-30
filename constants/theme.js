@@ -8,7 +8,7 @@ export const COLORS = {
   secondary: "#F9A825", // Dark purple
 
   white: "#FFF8E1",
-  black: "#000000",
+  black: "#030304",
   green: "#37E39F",
   red: "#F9A8BA",
   gray: "#6A6A6A",
@@ -35,11 +35,11 @@ export const SIZES = {
   largeTitle: 40,
   h1: 30,
   h2: 22,
-  h3: 16,
+  h3: 18,
   h4: 14,
   body1: 30,
-  body2: 22,
-  body3: 16,
+  body2: 20,
+  body3: 18,
   body4: 14,
   body5: 12,
 

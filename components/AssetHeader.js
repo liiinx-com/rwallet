@@ -33,7 +33,7 @@ const AssetHeader = ({ asset }) => {
         <Image
           source={image}
           style={{ height: 52, width: 52, marginRight: 7 }}
-        ></Image>
+        />
 
         <View
           style={{

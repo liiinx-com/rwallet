@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { IconTextButton } from "..";
+import IconTextButton from "../IconTextButton";
 import { SIZES } from "../../constants";
 
 const Toolbar = ({ buttons = [], onPress }) => {

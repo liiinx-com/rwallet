@@ -13,7 +13,9 @@ const index = ({ transactions, onPress }) => {
       }}
       ListHeaderComponent={
         <View style={{ marginBottom: SIZES.radius, marginTop: 20 }}>
-          <Text style={{ color: COLORS.white, ...FONTS.h2 }}>Transactions</Text>
+          <Text style={{ color: COLORS.white, ...FONTS.h2 }}>
+            Transaction History
+          </Text>
         </View>
       }
       renderItem={({ item }) => {

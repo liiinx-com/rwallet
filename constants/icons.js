@@ -33,10 +33,15 @@ import {
   faBars,
   faTimes,
   faComments,
+  faUtensils,
   faQrcode,
+  faCoins,
   faPowerOff,
+  faBuilding,
   faChartLine,
 } from "@fortawesome/free-solid-svg-icons";
+
+import { faBitcoin } from "@fortawesome/free-brands-svg-icons";
 
 export default {
   back_arrow,
@@ -54,7 +59,7 @@ export default {
   deposit: faGem,
   convert: faSync,
   settings: faCogs,
-  coin: faDollarSign,
+  coins: faBitcoin,
   arrowUp: faAngleDoubleUp,
   arrowDown: faAngleDoubleDown,
   check: faCheck,
@@ -67,6 +72,8 @@ export default {
   qrCode: faQrcode,
   market: faChartLine,
   info: faInfo,
+  restaurant: faUtensils,
+  building: faBuilding,
   tik,
   cdn,
   btc,

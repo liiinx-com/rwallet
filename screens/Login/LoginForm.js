@@ -19,7 +19,7 @@ const LoginForm = ({ onLogin, onSignup }) => {
       </Text>
       <View style={{ flex: 1, justifyContent: "center" }}>
         <Button
-          text="Login"
+          text="Sign In with Biometrics"
           colors={[COLORS.darkGray, COLORS.primary]}
           containerStyle={{ paddingVertical: 17, borderRadius: 19 }}
           onPress={onLogin}
@@ -33,7 +33,7 @@ const LoginForm = ({ onLogin, onSignup }) => {
             borderRadius: 19,
             borderColor: COLORS.primary,
             borderWidth: 1,
-            marginTop: SIZES.radius,
+            marginTop: SIZES.radius * 2,
           }}
           onPress={onSignup}
         />

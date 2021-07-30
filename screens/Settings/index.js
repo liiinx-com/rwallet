@@ -9,7 +9,9 @@ import SettingSwitchItem from "./SettingSwitchItem";
 import Button from "../../components/Button";
 
 const Settings = ({ navigation }) => {
-  const [faceId, setFaceId] = useState(false);
+  const [faceId] = useState(true);
+  const [darkMode] = useState(true);
+  const [autoSignout] = useState(true);
 
   const handleBackPress = () => {
     navigation.pop();
@@ -23,7 +25,7 @@ const Settings = ({ navigation }) => {
 
   const pressHandler = (key, value) => {
     const valueHandlers = {
-      faceid: () => setFaceId(value),
+      biometrics: () => {},
       theme: () => {},
       launchScreen: () => {},
       currency: () => {},
@@ -59,10 +61,22 @@ const Settings = ({ navigation }) => {
       <ScrollView>
         <SectionTitle title="Account" />
 
-        <View style={{ flexDirection: "row", marginTop: SIZES.radius }}>
-          <UserInfo containerStyle={{ flex: 1 }} />
+        {/* <View style={{ flexDirection: "row", marginTop: SIZES.radius }}>
+          <UserInfo username="amir.zad" containerStyle={{ flex: 1 }} />
           <KycStatus vrified={true} />
-        </View>
+        </View> */}
+        <SettingItem
+          title="KYC"
+          value="Not Verified"
+          itemKey="kyc"
+          onPress={pressHandler}
+        />
+        <SettingItem
+          title="Email"
+          value="am*******@c******a.**"
+          itemKey="email"
+          onPress={pressHandler}
+        />
         <SettingItem
           title="Language"
           value="English"
@@ -79,22 +93,28 @@ const Settings = ({ navigation }) => {
         <SectionTitle title="App" />
         <SettingItem
           title="Launch Screen"
-          value="Wallet"
+          value="Market"
           itemKey="launchScreen"
           onPress={pressHandler}
         />
-        <SettingItem
-          title="Theme"
-          value="Dark"
+        <SettingSwitchItem
+          title="Dark Mode"
+          value={darkMode}
           itemKey="theme"
           onPress={pressHandler}
         />
 
         <SectionTitle title="Security" />
         <SettingSwitchItem
-          title="FaceID"
-          itemKey="faceid"
+          title="Biometrics"
+          itemKey="biometrics"
           value={faceId}
+          onPress={pressHandler}
+        />
+        <SettingSwitchItem
+          title="Auto Signout"
+          itemKey="autosignout"
+          value={autoSignout}
           onPress={pressHandler}
         />
         <SettingItem
